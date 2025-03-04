@@ -3,6 +3,6 @@
 
 function [v_mod] = LCSMODEL(r, d, l, theta, w)
     theta = theta / 180 * pi;
-    v_mod = - w * r * cos(theta) - r * tan(asin((d - r * sin(theta))/l)) .* cos(theta) * w;
+    v_mod = - w * r * sin(theta) - r * tan(asin((d - r * sin(theta))/l)) .* cos(theta) * w;
 end
 
